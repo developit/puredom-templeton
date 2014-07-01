@@ -2,34 +2,43 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+
 		uglify: {
 			main : {
 				options: {
-					banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+					banner: '/*! <%= pkg.name %> <%= pkg.version %> */\n'
 				},
 				files: {
-					'puredom.templateengine.min.js': [
-						'puredom.templateengine.js'
+					'puredom-templeton.min.js': [
+						'puredom-templeton.js'
 					]
 				}
 			}
 		},
+
 		jshint : {
 			options : {
-				browser : true
+				'browser' : true
 			},
-			main : [
-				'puredom.templateengine.js'
-			]
+			main : {
+				options : {
+					'-W041' : true,
+					'-W030' : true
+				},
+				src : ['puredom-templeton.js']
+			}
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
+	require('load-grunt-tasks')(grunt);
 
 	grunt.registerTask('default', [
+		'build'
+	]);
+	
+	grunt.registerTask('build', [
 		'jshint:main',
 		'uglify:main'
 	]);
-	
+
 };

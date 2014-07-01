@@ -1,13 +1,29 @@
 {
-  "name": "puredom.templateengine",
-  "version": "0.1.0",
+  "name": "puredom-templeton",
+  "version": "1.0.0",
+  "description": "Replace puredom's default template() functionality with templeton.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/developit/puredom.templateengine.git"
+    "url": "git://github.com/developit/puredom-templeton.git"
   },
+  "scripts": {
+    "test": "echo 'No tests defined.'; exit 0;"
+  },
+  "keywords": [
+    "puredom",
+    "templeton",
+    "template"
+  ],
+  "licence": "BSD 3-Clause",
   "devDependencies": {
-    "grunt": "~0.4.2",
+    "grunt": "^0.4.5",
     "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-uglify": "~0.2.7"
+    "grunt-contrib-uglify": "~0.2.7",
+    "load-grunt-tasks": "^0.6.0",
+    "grunt-cli": "^0.1.13"
+  },
+  "dependencies": {
+    "puredom": "^1.3.0",
+    "templeton": "^2.0.2"
   }
 }
