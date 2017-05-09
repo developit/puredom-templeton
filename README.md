@@ -1,6 +1,8 @@
 puredom-templeton [![Version](https://img.shields.io/npm/v/puredom-templeton.svg?style=flat)](https://www.npmjs.org/package/puredom-templeton) 
 =================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/developit/puredom-templeton.svg)](https://greenkeeper.io/)
+
 Replace puredom's default `template()` functionality with [templeton](http://github.com/developit/templeton).
 
 
